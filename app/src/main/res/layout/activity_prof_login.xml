@@ -1,92 +1,164 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".EtudiantLoginActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout4"
+    android:layout_width="412dp"
+    android:layout_height="131dp"
+    android:background="@drawable/rectangle_118"
+    android:orientation="horizontal"
     android:padding="10dp"
-    android:background="@color/lightwhite"
-    tools:context=".ProfLoginActivity">
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="37dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Espace Enseignant"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68" />
+
+    <ImageView
+        android:id="@+id/GoBackIcon"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="horizontal">
+        android:contentDescription="@string/back"
+        android:onClick="goback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696"
+        app:srcCompat="@drawable/trace_12" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/GoBackIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="goback"
-            android:src="@drawable/ic_arrow_back_black_24dp"
-            android:contentDescription="@string/back" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/espace_professeur"
-            android:textColor="@color/greencolor"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/img"
-            android:layout_marginTop="40dp">
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:src="@drawable/ic_person_black_24dp"
-                android:contentDescription="@string/student_hot" />
-        </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="375dp"
+        android:layout_height="262dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+        app:layout_constraintVertical_bias="0.476"
+        tools:ignore="MissingConstraints">
 
         <EditText
             android:id="@+id/email"
-            android:layout_width="280dp"
-            android:layout_height="45dp"
-            android:hint="@string/email"
+            android:layout_width="256dp"
+            android:layout_height="41dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:paddingLeft="15dp"
-            android:inputType="textEmailAddress"
+            android:layout_marginTop="28dp"
+            android:autofillHints="@string/email"
             android:background="@drawable/btn"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
             android:paddingStart="15dp"
-            tools:ignore="RtlSymmetry"
-            android:autofillHints="@string/email" />
+            android:paddingLeft="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.756"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.195"
+            tools:ignore="RtlSymmetry" />
+
         <EditText
             android:id="@+id/password"
-            android:layout_width="280dp"
-            android:layout_height="45dp"
-            android:hint="@string/mot_de_pass"
+            android:layout_width="267dp"
+            android:layout_height="47dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:paddingLeft="15dp"
-            android:inputType="textPassword"
+            android:autofillHints="@string/mot_de_pass"
             android:background="@drawable/btn"
+            android:hint="@string/mot_de_pass"
+            android:inputType="textPassword"
             android:paddingStart="15dp"
+            android:paddingLeft="15dp"
             tools:ignore="RtlSymmetry"
-            android:autofillHints="@string/mot_de_pass" />
-        <Button
-            android:onClick="onClickValider"
-            android:layout_width="280dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:text="@string/valider"
-            android:textAllCaps="false"
-            android:background="@drawable/joinbtn"
-            android:textColor="@color/whitecolor"/>
-    </LinearLayout>
+            tools:layout_editor_absoluteX="90dp"
+            tools:layout_editor_absoluteY="116dp" />
 
-</LinearLayout>
+        <Button
+            android:layout_width="297dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangle_119"
+            android:onClick="onClickValider"
+            android:text="CONNEXION"
+            android:textAllCaps="false"
+            android:textColor="@color/whitecolor"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.794"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.922" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/email"
+            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.168"
+            app:srcCompat="@drawable/icon_feather_user" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/password"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538"
+            app:srcCompat="@drawable/icon_feather_lock" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="355dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/groupe_92" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

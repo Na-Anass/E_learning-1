@@ -6,67 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".ProfAccueilActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="349dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="686dp"
-        android:background="@drawable/text_views"
-        android:gravity="center"
-        android:text="@string/espace_professeur"
-        android:textSize="30sp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="412dp"
+        android:layout_height="131dp"
+        android:background="@drawable/rectangle_118"
+        android:orientation="horizontal"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0">
 
-    <Button
-        android:id="@+id/creer_btn"
-        android:onClick="onClickProfCreer"
-        android:layout_width="350dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="106dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="507dp"
-        android:background="@drawable/my_buttons"
-        android:text="@string/creer_une_seance"
-        android:textColor="#FFFFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.102" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="252dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/text_views"
+            android:gravity="center"
+            android:text="@string/espace_professeur"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.494" />
 
-    <Button
-        android:id="@+id/gerer_btn"
-        android:onClick="onClickProfModule"
-        android:layout_width="348dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="300dp"
-        android:background="@drawable/my_buttons"
-        android:text="@string/gerer_mes_seance"
-        android:textColor="#FFFFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/creer_btn"
-        app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="266dp"
+        android:layout_height="312dp"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="223dp">
+
+        <Button
+            android:id="@+id/creer_btn"
+            android:layout_width="350dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="168dp"
+            android:background="@drawable/my_buttons"
+            android:onClick="onClickProfCreer"
+            android:text="@string/creer_une_seance"
+            android:textColor="#FFFFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/gerer_btn"
+            android:layout_width="348dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/my_buttons"
+            android:onClick="onClickProfModule"
+            android:text="@string/gerer_mes_seance"
+            android:textColor="#FFFFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
