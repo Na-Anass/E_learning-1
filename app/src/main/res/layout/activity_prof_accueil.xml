@@ -8,82 +8,95 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout4"
-        android:layout_width="412dp"
-        android:layout_height="131dp"
+        android:layout_width="330dp"
+        android:layout_height="106dp"
         android:background="@drawable/rectangle_118"
         android:orientation="horizontal"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="252dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/text_views"
+            android:layout_width="230dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/espace_professeur"
-            android:textSize="30sp"
+            android:text="Espace Enseignant"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.494" />
+            app:layout_constraintVertical_bias="0.783"
+            tools:layout_editor_absoluteX="64dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="279dp"
+        android:layout_height="154dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+        app:layout_constraintVertical_bias="0.208"
+        app:srcCompat="@drawable/groupe_94" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout5"
-        android:layout_width="266dp"
-        android:layout_height="312dp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="223dp">
+        android:layout_width="283dp"
+        android:layout_height="252dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="27dp">
 
         <Button
             android:id="@+id/creer_btn"
-            android:layout_width="350dp"
-            android:layout_height="84dp"
+            android:layout_width="254dp"
+            android:layout_height="58dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="168dp"
-            android:background="@drawable/my_buttons"
+            android:background="@drawable/rectangle_12"
             android:onClick="onClickProfCreer"
             android:text="@string/creer_une_seance"
             android:textColor="#FFFFFFFF"
-            android:textSize="30sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.318"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.427" />
 
         <Button
             android:id="@+id/gerer_btn"
-            android:layout_width="348dp"
-            android:layout_height="72dp"
+            android:layout_width="255dp"
+            android:layout_height="52dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
-            android:background="@drawable/my_buttons"
+            android:background="@drawable/rectangle_119"
             android:onClick="onClickProfModule"
             android:text="@string/gerer_mes_seance"
             android:textColor="#FFFFFFFF"
-            android:textSize="30sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.304"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.872" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
