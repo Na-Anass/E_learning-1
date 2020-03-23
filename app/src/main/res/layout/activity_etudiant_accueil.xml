@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/etud_action1"
-        android:layout_width="370dp"
-        android:layout_height="70dp"
+        android:layout_width="346dp"
+        android:layout_height="79dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginEnd="30dp"
